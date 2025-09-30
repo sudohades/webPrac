@@ -12,8 +12,13 @@
 <body>
     <header>
         <nav class="navbar">
-        <h1 class="bebas-neue-regular">Some of my Thoughts</h1>
+            <h1 class="bebas-neue-regular">Some of my Thoughts</h1>
 
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="saira-condensed-regular navList">
                 <li class="navItem">
                     <a href="home.html">Home</a>
@@ -33,12 +38,20 @@
             </ul>
         </nav>
     </header>
-    <section class="michroma">
-        <h2>Cybersecurity</h2>
-    </section>
-    <section class="michroma">
-        <h2>Linux, the ups and downs</h2>
-    </section>
-    <section class="michroma">
-        <h2>Web dev and design trends</h2>
-    </section>
+    <div class="blog-section">
+        <section class="michroma">
+            <h2>Cybersecurity</h2>
+        </section>
+        <section class="michroma">
+            <h2>Linux, the ups and downs</h2>
+        </section>
+        <section class="michroma">
+            <h2>Web dev and design trends</h2>
+        </section>
+    </div>
+</body>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navList').classList.toggle('active');
+});
+</script>

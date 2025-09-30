@@ -16,6 +16,12 @@
         <nav class="navbar">
             <h1 class="bebas-neue-regular">Welcome to my homepage</h1>
 
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="saira-condensed-regular navList">
                 <li class="navItem">
                     <a href="home.html">Home</a>
@@ -37,7 +43,12 @@
     </header>
 
     <section class="hero">
-        <h2 class="michroma">My name is Jesse</h2>
-        <h3 class="bitcount-prop-single-ink-regular">Web Dev | Designer | System Architect | Cybersecurity Enthusiast</h3>
+        <h2 class="michroma banner">My name is Jesse</h2>
+        <h3 class="saira-condensed-regular roles">Web Dev | Designer | Systems Architect | Cybersecurity Enthusiast</h3>
     </section>
 </body>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navList').classList.toggle('active');
+});
+</script>

@@ -13,10 +13,8 @@
     --purple6:#9d4edd;
     --purple7:#c77dff;
     --purple8:#e0aaff;
-
-    padding: 0px;
-    margin:0px;
 }
+
 a:visited, a:link{
     color: var(--midtone);
     text-decoration: none;
@@ -41,64 +39,18 @@ body {
   font-style: normal;
 }
 
-.saira-condensed-extralight {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.saira-condensed-light {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
 .saira-condensed-regular {
   font-family: "Saira Condensed", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.saira-condensed-medium {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.saira-condensed-semibold {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.saira-condensed-bold {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.saira-condensed-extrabold {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.saira-condensed-black {
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
 .navbar{
     display: flex;
     justify-content: space-between;
     background: var(--primary-dark);
 }
 
-.navList{
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
 nav h1{
     display:flex;
     margin: 10px 10px;
@@ -106,9 +58,125 @@ nav h1{
     justify-content: center;
     color: var(--alt-light);
 }
+
+.navList{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    align-items: center;
+    justify-items: center;
+    width:30vw;
+    transition: all 0.3s ease-in-out;
+}
+.navItem{
+    padding: 8px;
+
+}
+
 nav ul{
     margin: 15px 10px;
     color: var(--midtone);
     padding: 10px;
     font-size: 18px;
+}
+nav ul li{
+    text-decoration: underline;
+}
+
+.hamburger{
+    display:none;
+    flex-direction: column;
+    cursor:pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--alt-light);
+    margin: 3px 0;
+}
+
+.banner{
+    font-size:40px;
+    position:relative;
+    top: 30px;
+    margin: 10px;
+
+}
+
+.roles{
+    font-size:25px;
+}
+
+.introText{
+    position: relative;
+    font-size: 32px;
+    top:30px;
+    margin:10px;
+}
+
+.skillsList{
+    font-size: 25px;
+}
+
+.contact-section{
+    position:relative;
+    top: 30px;
+    margin:10px;
+}
+
+.portfolio-section{
+    position:relative;
+    top:30px;
+    margin:10px;
+}
+
+.blog-section{
+    position:relative;
+    top:30px;
+    margin:10px;
+}
+
+@media (max-width:768px){
+    .navbar{
+        position: relative;
+    }
+
+    .hamburger{
+        display:flex;
+    }
+    .navList{
+        position:absolute;
+        top:100%;
+        left:0;
+        background: var(--primary-dark);
+        width: 100%;
+        z-index: 1000;
+        padding:0px;
+        margin: 0px;
+        grid-template-columns: repeat(5, 1fr);
+
+        opacity:0%;
+        transform:translateY(-20px);
+        pointer-events: none;
+    }
+
+    .navList.active{
+        transform: translateY(0);
+        opacity:1;
+        pointer-events:auto;
+    }
+}
+@media (min-width:769px){
+    .hamburger{
+        display:none;
+    }
+
+    .navList{
+        position:static;
+        width:30vw;
+    }
 }

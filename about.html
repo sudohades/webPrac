@@ -14,6 +14,12 @@
         <nav class="navbar">
             <h1 class="bebas-neue-regular">About me</h1>
 
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="saira-condensed-regular navList">
                 <li class="navItem">
                     <a href="home.html">Home</a>
@@ -35,11 +41,11 @@
     </header>
 
         <section>
-            <p>Hello, My name is Jesse, I'm a creative and performance oriented web designer and systems architect with a passion for building secure systems and interfaces for everyday use.</p>
+            <p class="saira-condensed-regular introText">Hello, My name is Jesse, I'm a creative and performance oriented web designer and systems architect with a passion for building secure systems and interfaces for everyday use.</p>
         </section>
         <section>
-            <h2 class="michroma">My Skills</h2>
-            <ul>
+            <h2 class="michroma banner">Skills</h2>
+            <ul class="saira-condensed-regular skillsList">
                 <li>Web Development</li>
                 <li>UI/UX Design</li>
                 <li>System Architecture</li>
@@ -49,3 +55,8 @@
             </ul>
         </section>
 </body>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navList').classList.toggle('active');
+});
+</script>

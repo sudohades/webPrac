@@ -12,7 +12,13 @@
 <body>
     <header>
         <nav class="navbar">
-        <h1 class="bebas-neue-regular">Wanna Connect?</h1>
+            <h1 class="bebas-neue-regular">Wanna Connect?</h1>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
 
             <ul class="saira-condensed-regular navList">
@@ -34,7 +40,7 @@
             </ul>
         </nav>
     </header>
-        <section class="michroma">
+        <section class="michroma contact-section">
             <div class="contact-card">
                 <h3>Email</h3>
             </div>
@@ -56,3 +62,8 @@
             </div>
         </section>
 </body>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navList').classList.toggle('active');
+});
+</script>
