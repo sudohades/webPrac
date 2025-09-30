@@ -1,0 +1,114 @@
+:root{
+    --primary-dark:#22223b;
+    --alt-dark:#4a4e69;
+    --midtone:#9a8c98;
+    --alt-light:#c9ada7;
+    --primary-light:#f2e9e4;
+
+    --purple1:#10002b;
+    --purple2:#240046;
+    --purple3:#3c096c;
+    --purple4:#5a189a;
+    --purple5:#7b2cbf;
+    --purple6:#9d4edd;
+    --purple7:#c77dff;
+    --purple8:#e0aaff;
+
+    padding: 0px;
+    margin:0px;
+}
+a:visited, a:link{
+    color: var(--midtone);
+    text-decoration: none;
+}
+body {
+    margin: 0px;
+}
+.michroma{
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.saira-condensed-thin {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.saira-condensed-extralight {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.saira-condensed-light {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.saira-condensed-regular {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.saira-condensed-medium {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.saira-condensed-semibold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.saira-condensed-bold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.saira-condensed-extrabold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.saira-condensed-black {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background: var(--primary-dark);
+}
+
+.navList{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav h1{
+    display:flex;
+    margin: 10px 10px;
+    align-items: center;
+    justify-content: center;
+    color: var(--alt-light);
+}
+nav ul{
+    margin: 15px 10px;
+    color: var(--midtone);
+    padding: 10px;
+    font-size: 18px;
+}
