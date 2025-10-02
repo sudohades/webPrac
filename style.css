@@ -5,6 +5,17 @@
     --alt-light:#c9ada7;
     --primary-light:#f2e9e4;
 
+    --rose-red: #ca054d;
+    --blush: #df5982;
+    --cherry-pink: #f4acb7;
+    --peach: #ffc6c7;
+    --pink: #ffcad4;
+
+    --mint: #c5e0d8;
+    --byzantium: #893168;
+    --green-choice: #335145;
+    --snow: #fffcff;
+
     --purple1:#10002b;
     --purple2:#240046;
     --purple3:#3c096c;
@@ -13,6 +24,9 @@
     --purple6:#9d4edd;
     --purple7:#c77dff;
     --purple8:#e0aaff;
+
+    --gradient-blend-mode: normal;
+    --gradient-blur: 0px;
 }
 
 a:visited, a:link{
@@ -21,6 +35,18 @@ a:visited, a:link{
 }
 body {
     margin: 0px;
+
+    background: radial-gradient(at 21.6% 42.9%, var(--purple1) 0px, transparent 50%),
+                radial-gradient(at 8.2% 10.5%, var(--purple2) 0px, transparent 50%),
+                radial-gradient(at 63.2% 18.4%, var(--purple2) 0px, transparent 50%),
+                radial-gradient(at 85% 94%, var(--purple3) 0px, transparent 50%),
+                radial-gradient(at 75.5% 76.3%, var(--purple4) 0px, transparent 50%),
+                radial-gradient(at 27% 82.6%, var(--purple5) 0px, transparent 50%),
+                radial-gradient(at 53.9% 53.9%, var(--purple6) 0px, transparent 50%),
+                radial-gradient(at 82.3% 6.1%, var(--purple7) 0px, transparent 50%);
+
+    mix-blend-mode: var(--gradient-blend-mode);
+    min-height: 100vh;;
 }
 .michroma{
     font-family: "Michroma", sans-serif;
@@ -99,16 +125,44 @@ nav ul li{
     margin: 3px 0;
 }
 
-.banner{
+.frosted-backdrop {
+    backdrop-filter: blur(var(--gradient-blur)) contrast(100%) brightness(100%);
+    -webkit-backdrop-filter: blur(var(--gradient-blur)) contrast(100%) brightness(100%);
+}
+
+.image1{
+    width:20vw;
+    position: relative;
+    display: block;
+    top: 120px;
+    margin: 0 auto;
+}
+.banner1{    margin: 10px;
+
     font-size:40px;
     position:relative;
-    top: 30px;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
+    color: var(--rose-red);
+    text-shadow:
+        0 0 2px var(--blush),
+        0 0 4px var(--cherry-pink),
+        0 0 6px var(--peach),
+        0 0 10px var(--pink);
 
 }
 
 .roles{
     font-size:25px;
+    color: var(--snow);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    top: 130px;
 }
 
 .introText{
@@ -116,28 +170,47 @@ nav ul li{
     font-size: 32px;
     top:30px;
     margin:10px;
+    color: var(--snow);
+}
+
+.banner2{
+    font-size:40px;
+    position:relative;
+    top: 30px;
+    margin: 10px;
+    color: var(--rose-red);
+    text-shadow:
+        0 0 2px var(--blush),
+        0 0 4px var(--cherry-pink),
+        0 0 6px var(--peach),
+        0 0 10px var(--pink);
+
 }
 
 .skillsList{
     font-size: 25px;
+    color:var(--snow);
 }
 
 .contact-section{
     position:relative;
     top: 30px;
     margin:10px;
+    color: var(--mint);
 }
 
 .portfolio-section{
     position:relative;
     top:30px;
     margin:10px;
+    color: var(--mint);
 }
 
 .blog-section{
     position:relative;
     top:30px;
     margin:10px;
+    color: var(--mint);
 }
 
 @media (max-width:768px){
@@ -157,8 +230,6 @@ nav ul li{
         z-index: 1000;
         padding:0px;
         margin: 0px;
-        grid-template-columns: repeat(5, 1fr);
-
         opacity:0%;
         transform:translateY(-20px);
         pointer-events: none;
