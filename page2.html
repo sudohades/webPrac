@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 2</title>
+  <style>
+    body {
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+      background: #1e1e1e;
+      color: white;
+    }
+    body.loaded {
+      opacity: 1;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+    }
+    #overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #555;
+      border-top: 6px solid #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      background: white;
+      color: #1e1e1e;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Page 2</h1>
+  <p>This is the alternate layout.</p>
+  <button id="switchBtn">Back to Page 1</button>
+
+  <div id="overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <script>
+    // Fade-in on load
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loaded");
+    });
+
+    const overlay = document.getElementById("overlay");
+    document.getElementById("switchBtn").addEventListener("click", () => {
+      document.body.classList.remove("loaded");
+      document.body.classList.add("fade-out");
+      overlay.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = "page1.html";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

@@ -35,6 +35,8 @@ a:visited, a:link{
 }
 body {
     margin: 0px;
+    overflow-x: hidden;
+
 
     background: radial-gradient(at 21.6% 42.9%, var(--purple1) 0px, transparent 50%),
                 radial-gradient(at 8.2% 10.5%, var(--purple2) 0px, transparent 50%),
@@ -44,6 +46,8 @@ body {
                 radial-gradient(at 27% 82.6%, var(--purple5) 0px, transparent 50%),
                 radial-gradient(at 53.9% 53.9%, var(--purple6) 0px, transparent 50%),
                 radial-gradient(at 82.3% 6.1%, var(--purple7) 0px, transparent 50%);
+
+    background-attachment: fixed;
 
     mix-blend-mode: var(--gradient-blend-mode);
     min-height: 100vh;;
@@ -93,6 +97,8 @@ nav h1{
     align-items: center;
     justify-items: center;
     width:30vw;
+    min-width: 350px;
+    max-width: 100vw;
     transition: all 0.3s ease-in-out;
 }
 .navItem{
@@ -165,9 +171,19 @@ nav ul li{
     top: 130px;
 }
 
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+
+}
+
 .introText{
     position: relative;
     font-size: 32px;
+    max-width: 80%;
     top:30px;
     margin:10px;
     color: var(--snow);
@@ -241,13 +257,22 @@ nav ul li{
         pointer-events:auto;
     }
 }
-@media (min-width:769px){
+@media (min-width:769px) and (max-width:1024px) {
     .hamburger{
         display:none;
     }
 
     .navList{
         position:static;
-        width:30vw;
+        width:40vw;
+    }
+}
+@media (min-width: 1025px){
+    .hamburger{
+        display: none;
+    }
+    
+    .navList{
+        width: 30vw;
     }
 }
