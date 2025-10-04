@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Light</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Michroma&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="bebas-neue-regular lightBanner">Welcome to my homepage</h1>
+        <nav class="lightNavbar">
+            
+
+            <div class="light-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="saira-condensed-regular light-navList">
+                <li class="lightNavItem">
+                    <a href="home-light.html">Home</a>
+                </li>
+                <li class="lightNavItem">
+                    <a href="about-light.html">About</a>
+                </li>
+                 <li class="lightNavItem">
+                    <a href="portfolio-light.html">My work</a>
+                </li>
+                <li class="lightNavItem">
+                    <a href="contact-light.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="light-hero">
+        <img src="sudo-hades-anime2.jpeg" alt="main-image" class="image1">
+
+        <h2 class="michroma lightBanner">J E S S E _ J A C O B</h2>
+
+        <a href="home.html">Dark mode</a>
+
+        <h3 class="saira-condensed-regular roles">Web Dev | Designer | Systems Architect | Cybersecurity Enthusiast</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur facere vel exercitationem, asperiores voluptatum labore libero dignissimos ut officia eveniet illum eius. Possimus quo aut neque provident quia officiis.</p>
+    </section>
+    
+</body>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.navList').classList.toggle('active');
+});
+</script>
