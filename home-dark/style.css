@@ -171,6 +171,9 @@ nav ul li{
     display: block;
     top: 120px;
     margin: 0 auto;
+    border-radius: 120px;
+    border: 4px solid var(--byzantium);
+    padding: 20px;
 }
 .banner1{    margin: 10px;
 
@@ -181,13 +184,18 @@ nav ul li{
     justify-content: center;
     align-items: center;
     margin: 10px;
-    color: var(--rose-red);
+    color: var(--byzantium);
     text-shadow:
         0 0 2px var(--blush),
         0 0 4px var(--cherry-pink),
         0 0 6px var(--peach),
-        0 0 10px var(--pink);
+        0 0 8px var(--pink);
 
+}
+
+#sudo-hades {
+    font-size: 25px;
+    letter-spacing: 10px;
 }
 
 .roles{
@@ -221,6 +229,9 @@ nav ul li{
 .banner2{
     font-size:40px;
     position:relative;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 5px;
     top: 30px;
     margin: 10px;
     color: var(--rose-red);
@@ -233,6 +244,7 @@ nav ul li{
 }
 
 .skillsList{
+    display: grid;
     font-size: 25px;
     color:var(--snow);
 }
