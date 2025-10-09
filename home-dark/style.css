@@ -225,14 +225,21 @@ nav ul li{
     margin:10px;
     color: var(--snow);
 }
+.skills{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(8, auto);
+    gap: 10px;
+
+}
 
 .banner2{
     font-size:40px;
     position:relative;
     display: flex;
-    justify-content: center;
     letter-spacing: 5px;
-    top: 30px;
+    grid-row: 2 /3;
+    grid-column: 2/3;
     margin: 10px;
     color: var(--rose-red);
     text-shadow:
@@ -247,20 +254,58 @@ nav ul li{
     display: grid;
     font-size: 25px;
     color:var(--snow);
+    grid-row: 5 / 7 ;
+    grid-column: 2 /4;
+
 }
 
 .contact-section{
     position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     top: 30px;
     margin:10px;
     color: var(--mint);
 }
+
+.contact-card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 15vh;
+    text-shadow: 
+        0 0 0 rgb(255,0,0), 
+        0 0 0 rgb(0,255,0), 
+        0 0 0 rgb(0,0,255);
+}
+.contact-card:hover{
+    transform: scale(1.5);
+    text-shadow: 
+    0.3px -0.1px 0.1px rgb(255,0,0), 
+    0.2px 0.1px 0 rgb(0,255,0), 
+    -0.1px 0.2px 0 rgb(0,0,255);
+    transition: 0.2s cubic-bezier(0.5,5,0.5,-0.5);
+
+}
+    
 
 .portfolio-section{
     position:relative;
     top:30px;
     margin:10px;
     color: var(--mint);
+    display: grid;
+    grid-template-columns: repeat( 8, 1fr);
+    grid-template-rows: repeat(8, 2fr);
+    gap: 5px;
+    
+}
+
+.card {
+    font-size: 12px;
+    padding: 10px;
 }
 
 .blog-section{
